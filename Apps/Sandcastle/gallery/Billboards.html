@@ -33,7 +33,7 @@ function addBillboard() {
     Sandcastle.declare(addBillboard);
 
     viewer.entities.add({
-        position : Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883),
+        position : Cesium.Cartesian3.fromDegrees(-76.482503, 42.444721),
         billboard :{
             image : '../images/Cesium_Logo_overlay.png'
         }
@@ -44,7 +44,7 @@ function setBillboardProperties() {
     Sandcastle.declare(setBillboardProperties);
 
     viewer.entities.add({
-        position : Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883),
+        position : Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883), //get this from the phone GPS
         billboard : {
             image : '../images/Cesium_Logo_overlay.png', // default: undefined
             show : true, // default
@@ -79,7 +79,7 @@ function changeBillboardProperties() {
 
 function sizeBillboardInMeters() {
     Sandcastle.declare(sizeBillboardInMeters);
-    
+
     var entity = viewer.entities.add({
         position : Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883),
         billboard : {
@@ -87,7 +87,7 @@ function sizeBillboardInMeters() {
             sizeInMeters : true
         }
     });
-    
+
     viewer.zoomTo(entity);
 }
 
