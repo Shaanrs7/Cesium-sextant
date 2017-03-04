@@ -35,8 +35,8 @@ viewer.canvas.addEventListener('click', function(e){
     var cartesian = viewer.camera.pickEllipsoid(mousePosition, ellipsoid);
     if (cartesian) {
         var cartographic = ellipsoid.cartesianToCartographic(cartesian);
-        var longitudeString = Cesium.Math.toDegrees(cartographic.longitude).toFixed(6);
-        var latitudeString = Cesium.Math.toDegrees(cartographic.latitude).toFixed(6);
+        var longitudeString = Cesium.Math.toDegrees(cartographic.longitude).toFixed(2);
+        var latitudeString = Cesium.Math.toDegrees(cartographic.latitude).toFixed(2);
 
         alert(longitudeString + ', ' + latitudeString);
     } else {
