@@ -28,6 +28,12 @@ function startup(Cesium) {
     'use strict';
 //Sandcastle_Begin
 let update_coordinates=[];
+var json_file= './SampleFile.json';
+
+var patharray= json_file.sequence;//.geometry.coordinates;
+
+alert(json_file);
+
 var viewer = new Cesium.Viewer('cesiumContainer');
 viewer.canvas.addEventListener('click', function(e){
     var mousePosition = new Cesium.Cartesian2(e.clientX, e.clientY);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+
+
+<NetworkLink>
+  <name>xGDS Maps</name>
+  <visibility>1</visibility>
+  <Style>
+    <ListStyle>
+      <listItemType>check</listItemType>
+    </ListStyle>
+  </Style>
+  <Link>
+    <href>http://localhost/xgds_map_server/feed/all.kml?doc=0</href>
+    <refreshMode>onInterval</refreshMode>
+    <refreshInterval>14400</refreshInterval>
+  </Link>
+</NetworkLink>
+
+
+
+</kml>
