@@ -40,13 +40,27 @@ var options = {
 Sandcastle.addToolbarMenu([{
     text : 'KML - xGDS path',
     onselect : function() {
-        viewer.camera.flyHome(0);
+/*var west = -155.2008;
+var south = 19.3675;
+var east = -155.7;
+var north = 19.4;
+var rectangle = Cesium.Rectangle.fromDegrees(west, south, east, north);
+
+viewer.camera.flyTo({
+    destination : rectangle});
+*/
+
+        //viewer.camera.flyHome(0);
+
+
 //	var url = '../../SampleData/kml/Today.kmz';
 //	var promise = Cesium.KmlDataSource.load(url,options,{
 //	    proxy : new Cesium.DefaultProxy('/proxy/')});
-        viewer.dataSources.add(Cesium.KmlDataSource.load('../../SampleData/kml/Today.kmz', options));
+//viewer.entities.removeAll();
+       var destin = viewer.dataSources.add(Cesium.KmlDataSource.load('../../SampleData/kml/Today.kmz', options));
+	viewer.flyTo(destin);
 //	 viewer.dataSources.add(promise);
-  
+ // viewer.flyTo(kmlData.entities);
 //	var proxy = new Cesium.DefaultProxy('/proxy/');
 //	 viewer.dataSources.add(Cesium.KmlDataSource.load('../../SampleData/kml/Today.kmz', options));
 
