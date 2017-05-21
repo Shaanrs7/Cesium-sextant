@@ -28,7 +28,7 @@ function startup(Cesium) {
     'use strict';
 //Sandcastle_Begin
 var viewer = new Cesium.Viewer('cesiumContainer');
-viewer.canvas.addEventListener('click', function(e){
+/*viewer.canvas.addEventListener('click', function(e){
     var mousePosition = new Cesium.Cartesian2(e.clientX, e.clientY);
 
     var ellipsoid = viewer.scene.globe.ellipsoid;
@@ -43,7 +43,7 @@ viewer.canvas.addEventListener('click', function(e){
         alert('Globe was not picked');
     }
 
-}, false);
+}, false);*/
 /*var redLine = viewer.entities.add({
     name : 'Red line on the surface',
     polyline : {
@@ -62,11 +62,11 @@ var selfPosition = viewer.entities.add({
 
 
 var glowingLine = viewer.entities.add({
-    name : 'Glowing blue line on the surface',
+    name : 'Simulated Sextant Path',
     polyline : {
         positions : Cesium.Cartesian3.fromDegreesArray([-76.482503, 42.444721,
                                                         -76.576803, 42.442110, -76.576803, 43.578792]),
-        width : 10,
+        width : 5,
         material : new Cesium.PolylineGlowMaterialProperty({
             glowPower : 0.2,
             color : Cesium.Color.BLUE
